@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Proyectos - Promart Homecenter</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Gestión de Proyectos - Promart Homecenter</h1>
+        <div class="project-form">
+            <h2>Crear Nuevo Proyecto</h2>
+            <form id="project-form">
+                <input type="text" id="project-name" placeholder="Nombre del Proyecto" required>
+                <textarea id="project-description" placeholder="Descripción del Proyecto" required></textarea>
+                <input type="date" id="project-start-date" required>
+                <input type="date" id="project-end-date" required>
+                <button type="submit">Crear Proyecto</button>
+            </form>
+        </div>
+        <div class="projects">
+            <h2>Proyectos</h2>
+            <ul id="project-list"></ul>
+        </div>
+    </div>
+
+    <!-- Modal para detalles del proyecto -->
+    <div id="project-details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-modal">&times;</span>
+            <h2 id="modal-project-name"></h2>
+            <p id="modal-project-description"></p>
+            <p><strong>Fecha de Inicio:</strong> <span id="modal-project-start-date"></span></p>
+            <p><strong>Fecha de Fin:</strong> <span id="modal-project-end-date"></span></p>
+            
+            <!-- Gestión de tareas -->
+            <div class="task-form">
+                <h3>Agregar Nueva Tarea</h3>
+                <input type="text" id="task-name" placeholder="Nombre de la Tarea">
+                <button id="add-task">Agregar Tarea</button>
+                <ul id="task-list"></ul>
+            </div>
+
+            <!-- Gestión de recursos -->
+            <div class="resources">
+                <h3>Recursos</h3>
+                <input type="text" id="resource-name" placeholder="Nombre del Recurso">
+                <button id="add-resource">Agregar Recurso</button>
+                <ul id="resource-list"></ul>
+            </div>
+
+            <!-- Gestión de riesgos -->
+            <div class="risks">
+                <h3>Riesgos</h3>
+                <input type="text" id="risk-name" placeholder="Descripción del Riesgo">
+                <button id="add-risk">Agregar Riesgo</button>
+                <ul id="risk-list"></ul>
+            </div>
+
+            <!-- Generación de informes -->
+            <div class="reports">
+                <h3>Informes</h3>
+                <button id="generate-report">Generar Informe</button>
+                <ul id="report-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
